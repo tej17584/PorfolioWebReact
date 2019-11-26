@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Book from "./Book";
 import Home from "./Home";
+import HomeLetters from "./HomeLetters";
 
 
 
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <HomeLetters/>
         <Home/>
       </div>
     );
