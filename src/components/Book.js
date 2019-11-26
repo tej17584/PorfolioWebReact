@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import './Book.scss';
+import HomeLetters from "./HomeLetters";
+
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Book extends Component {

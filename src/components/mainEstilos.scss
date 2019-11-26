@@ -1,0 +1,41 @@
+$backgroundColor :#e2bba9;
+
+body {
+    background: $backgroundColor;
+    margin: 0%;
+}
+
+
+.Div1 {
+    margin-top: 1000px;
+    margin-bottom: 1000px;
+    margin-left: 800px;
+    width: 500px;
+    height: 500px;
+}
+
+.Div2 {
+    position: relative; 
+    display: flex;
+    flex-wrap: wrap;
+   
+    width: 600px;
+    height: 500px;
+    margin-top: -100%;
+    margin-left: -120%;
+    
+}
+
+.Div2 > div {
+    
+    margin: 30px;
+    max-width: 230px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+h1{
+    margin: 0;
+    text-align: center;
+}

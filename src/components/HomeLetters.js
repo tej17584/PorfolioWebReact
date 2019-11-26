@@ -6,7 +6,12 @@ import './HomeLetters.scss';
 class HomeLetters extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            Mensaje: "Alejandro Tejada",
+        }
     }
+
 
 
     componentDidMount() {
@@ -31,7 +36,7 @@ class HomeLetters extends Component {
         };
 
         var defaults = {
-            defaultText: "Alejandro Tejada",
+            defaultText: this.props.Mensaje,
             textCss: {
                 fontSize: "72px",
                 color: "#222"
@@ -141,19 +146,19 @@ class HomeLetters extends Component {
         });
 
         test.dispatchEvent(new Event("click"));
-    
-}
+
+    }
 
 
-render() {
+    render() {
 
-    return (
-        <div>
-            <div id="main" className="starfall-ac"></div>
-            <div id="test"></div>
-        </div>
-    );
-}
+        return (
+            <div>
+                <div id="main" className="starfall-ac"></div>
+                <div id="test"></div>
+            </div>
+        );
+    }
 }
 
 export default HomeLetters;
