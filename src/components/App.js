@@ -5,6 +5,11 @@ import Home from "./Home";
 import HomeLetters from "./HomeLetters";
 import './mainEstilos.scss';
 import scrollToComponent from 'react-scroll-to-component';
+import Boton from "./Boton";
+import Hacer from "./Hacer";
+import './MainCV.scss';
+import SobreMi from "./SobreMi";
+import Experiencia from "./Experiencia";
 
 
 
@@ -18,8 +23,6 @@ class App extends Component {
     scrollToComponent(this.Home, { offset: 0, align: 'middle', duration: 500, ease: 'inExpo' });
   }
 
-
-
   render() {
     return (
       <div>
@@ -29,24 +32,31 @@ class App extends Component {
           <Home />
           <div className="Div2">
             <div>
-              <h1>Sobre mi</h1>
-              <Book/>
-              </div>
-              <div>
-              <h1>Experiencia</h1>
-              <Book/>
-              </div>
-              <div>
-              <h1>Mis educación</h1>
-              <Book/>
-              </div>
-              <div>
-              <h1>Lo que sé hacer</h1>
-              <Book/>
-              </div>
+            <button className="btn-0" onClick={() => scrollToComponent(this.SombreMi, { offset: 0, align: 'middle', duration: 500})}>Sobre Mi</button>
+              <Book />
+            </div>
+            <div>
+            <button className="btn-0" onClick={() => scrollToComponent(this.Experiencia, { offset: 0, align: 'middle', duration: 500})}>Experiencia</button>
+              <Book />
+            </div>
+            <div>
+            <button className="btn-0" onClick={() => scrollToComponent(this.Hacer, { offset: 0, align: 'middle', duration: 500})}>Lo que sé hacer</button>
+              <Book />
+            </div>
+            <div>
+           
+            </div>
           </div>
         </section>
-
+        <section ref={(section) => { this.SombreMi = section; }} className="SobreMi">
+          <SobreMi/>
+        </section>
+        <section ref={(section) => { this.Experiencia = section; }} className="Experiencia">
+         <Experiencia/>
+        </section>
+        <section ref={(section) => { this.Hacer = section; }} className="Hacer">
+        <Hacer/>
+        </section>
       </div>
     );
   }
